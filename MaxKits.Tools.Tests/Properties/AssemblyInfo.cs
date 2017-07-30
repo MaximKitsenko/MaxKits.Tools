@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 
-[assembly: AssemblyTitle("MaxKits.Tools")]
+[assembly: AssemblyTitle("MaxKits.Tools.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MaxKits.Tools")]
+[assembly: AssemblyProduct("MaxKits.Tools.Tests")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -22,7 +22,7 @@ using System.Runtime.InteropServices;
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 
-[assembly: Guid("dea026ca-d440-46e5-87cf-619fb160c58f")]
+[assembly: Guid("35475b43-f0d3-4203-a785-6898a70dfacd")]
 
 // Version information for an assembly consists of the following four values:
 //

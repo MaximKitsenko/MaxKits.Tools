@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxKits.Tools", "src\MaxKits.Tools\MaxKits.Tools.csproj", "{DEA026CA-D440-46E5-87CF-619FB160C58F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxKits.Tools.Tests", "src\MaxKits.Tools.Tests\MaxKits.Tools.Tests.csproj", "{35475B43-F0D3-4203-A785-6898A70DFACD}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DEA026CA-D440-46E5-87CF-619FB160C58F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEA026CA-D440-46E5-87CF-619FB160C58F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEA026CA-D440-46E5-87CF-619FB160C58F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEA026CA-D440-46E5-87CF-619FB160C58F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35475B43-F0D3-4203-A785-6898A70DFACD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35475B43-F0D3-4203-A785-6898A70DFACD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35475B43-F0D3-4203-A785-6898A70DFACD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35475B43-F0D3-4203-A785-6898A70DFACD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection

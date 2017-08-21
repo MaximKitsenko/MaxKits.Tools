@@ -53,52 +53,32 @@ namespace MaxKits.Patterns.Tests.Creational.Prototype
 			footballTeamCopy.Captan.Name.Should().Be(newName);
 
 			object.ReferenceEquals(footballTeamCopy, _footballTeamRussia).Should().BeFalse();
+			object.ReferenceEquals(footballTeamCopy.Captan, _footballTeamRussia.Captan).Should().BeFalse();
 		}
 
-		public void TestShallowPlayerName()
+
+		[Test]
+		public void SwallowCloneObject_CopyAndOriginalCompletelyUndependentObjects()
 		{
-			/*
-			------------------------SHALLOW-----------------------------------------------------
-			*/
-			Console.WriteLine( "------------------------SHALLOW-PLAYER-NAME-------------" );
+			//a
+			var footballTeamCopy = _footballTeamRussia.ShallowClone();
 
-			Console.WriteLine( "footballTeamRussia:" );
-			Console.WriteLine( this._footballTeamRussia.ToString() );
+			//a
+			const int newNumber = 100500;
+			const string newName = "100500";
 
-			var footballTeamRussiaShallow = this._footballTeamRussia.ShallowClone();
-			Console.WriteLine( "footballTeamRussiaShallow:" );
-			Console.WriteLine( footballTeamRussiaShallow.ToString() );
+			footballTeamCopy.Captan.Number = newNumber;
+			footballTeamCopy.Players[0].Name = newName;
 
-			Console.WriteLine( "\n\nfootballTeamRussia.Players[0].Name += \"Looser\"" );
-			this._footballTeamRussia.Players[ 0 ].Name += "Looser";
-			Console.WriteLine( "footballTeamRussia" );
-			Console.WriteLine( this._footballTeamRussia.ToString() );
+			//a
+			_footballTeamRussia.Players[0].Number.Should().Be(newNumber);
+			_footballTeamRussia.Captan.Name.Should().Be(newName);
 
-			Console.WriteLine( "footballTeamRussiaShallow" );
-			Console.WriteLine( footballTeamRussiaShallow.ToString() );
-		}
+			footballTeamCopy.Players[0].Number.Should().Be(newNumber);
+			footballTeamCopy.Captan.Name.Should().Be(newName);
 
-		public void TestShallowCapitanNumber()
-		{
-			/*
-		------------------------SHALLOW-----------------------------------------------------
-		*/
-			Console.WriteLine( "-----------------------SHALLOW-CAPITAN-NUMBER-----------" );
-
-			Console.WriteLine( "footballTeamRussia:" );
-			Console.WriteLine( this._footballTeamRussia.ToString() );
-
-			FootballTeam footballTeamRussiaShallow = this._footballTeamRussia.ShallowClone();
-			Console.WriteLine( "footballTeamRussiaShallow:" );
-			Console.WriteLine( footballTeamRussiaShallow.ToString() );
-
-			Console.WriteLine( "\n\nfootballTeamRussia.Captan.Number = 100500" );
-			this._footballTeamRussia.Captan.Number = 100500;
-			Console.WriteLine( "footballTeamRussia" );
-			Console.WriteLine( this._footballTeamRussia.ToString() );
-
-			Console.WriteLine( "footballTeamRussiaShallow" );
-			Console.WriteLine( footballTeamRussiaShallow.ToString() );
+			object.ReferenceEquals(footballTeamCopy, _footballTeamRussia).Should().BeFalse();
+			object.ReferenceEquals(footballTeamCopy.Captan, _footballTeamRussia.Captan).Should().BeTrue();
 		}
 
 		public void TestShallowObjectPlayer()

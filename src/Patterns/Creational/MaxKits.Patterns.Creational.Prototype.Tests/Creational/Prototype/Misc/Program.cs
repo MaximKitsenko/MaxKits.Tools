@@ -10,13 +10,13 @@ namespace MaxKits.Patterns.Tests.Creational.Prototype.Misc
 		{
 			BaseCloneableTest t = new BaseCloneableTest();
 			t.Init();
-			t.TestShallowCapitanNumber();
+			//t.TestShallowCapitanNumber();
 			t.Init();
 			t.TestShallowObjectCountry();
 			t.Init();
 			t.TestShallowObjectPlayer();
 			t.Init();
-			t.TestShallowPlayerName();
+			//t.TestShallowPlayerName();
 			
 			t.Init();
 			t.TestDeepCapitanNumber();

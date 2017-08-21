@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DEA026CA-D440-46E5-87CF-619FB160C58F}</ProjectGuid>
+    <ProjectGuid>{FC30A411-77D7-44D4-8DBB-5B16DABC02EB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MaxKits.Tools</RootNamespace>
-    <AssemblyName>MaxKits.Tools</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <RootNamespace>MaxKits.Patterns.Tests</RootNamespace>
+    <AssemblyName>MaxKits.Patterns.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework, Version=3.7.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\NUnit.3.7.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,11 +43,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Creational\Prototype\Misc\Country.cs" />
+    <Compile Include="Creational\Prototype\Misc\FootballTeam.cs" />
+    <Compile Include="Creational\Prototype\Misc\Player.cs" />
+    <Compile Include="Creational\Prototype\Misc\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Creational\Prototype\BaseCloneableTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Patterns\Creational\" />
+    <ProjectReference Include="..\MaxKits.Patterns.Creational.Prototype\MaxKits.Patterns.Creational.Prototype.csproj">
+      <Project>{7e634b27-7bc7-4bab-9a0b-23a2cdf46a5e}</Project>
+      <Name>MaxKits.Patterns.Creational.Prototype</Name>
+    </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

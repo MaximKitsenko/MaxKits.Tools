@@ -1,0 +1,2 @@
+﻿Shallow clon - copys object, but all properties (that non valuable) references to the old objects.Really
+you get New link (to the clone of original object) all other links in objects tree a the same as in the original tree.
